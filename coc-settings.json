@@ -11,7 +11,6 @@
 	"diagnostic.errorSign": "•",
 	"diagnostic.warningSign": "•",
 	"diagnostic.infoSign": "•",
-	"jedi.executable.command": "jedi-language-server",
 	"jedi.enable": true,
 	"jedi.startupMessage": false,
 	"jedi.markupKindPreferred": "plaintext",
@@ -19,6 +18,7 @@
 	"jedi.jediSettings.autoImportModules": [],
 	"jedi.jediSettings.caseInsensitiveCompletion": true,
 	"jedi.jediSettings.debug": false,
+	"jedi.executable.command": "jedi-language-server",
 	"jedi.executable.args": [],
 	"jedi.codeAction.nameExtractFunction": "jls_extract_def",
 	"jedi.codeAction.nameExtractVariable": "jls_extract_var",
@@ -41,5 +41,50 @@
 		".venv",
 		"__pycache__",
 		"venv"
-	]
+	],
+	"diagnostic-languageserver.filetypes": {
+		"python": "pylint"
+	},
+	"diagnostic-languageserver.linters": {
+		"pylint": {
+			"sourceName": "pylint",
+			"command": "pylint",
+			"debounce": 100,
+			"args": [
+				"--output-format",
+				"text",
+				"--score",
+				"no",
+				"--msg-template",
+				"'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
+				"%file"
+			],
+			"formatPattern": [
+				"^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+				{
+					"line": 1,
+					"column": 2,
+					"endColumn": 2,
+					"security": 3,
+					"message": 4
+				}
+			],
+			"rootPatterns": [
+				"pyproject.toml",
+				"setup.py",
+				".git"
+			],
+			"securities": {
+				"informational": "hint",
+				"refactor": "info",
+				"convention": "info",
+				"warning": "warning",
+				"error": "error",
+				"fatal": "error"
+			},
+			"offsetColumn": 1,
+			"offsetColumnEnd": 1,
+			"formatLines": 1
+		}
+	}
 }
