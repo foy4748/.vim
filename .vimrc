@@ -24,5 +24,9 @@ call plug#begin('~/.vim/plugged')
 	"PyLint
 	Plug 'vim-scripts/pylint.vim'
 
+	"QuickScope for fast horizontal
+	"Movement
+	Plug 'unblevable/quick-scope'
+
 call plug#end()
 "End of Installing Plugins-----------

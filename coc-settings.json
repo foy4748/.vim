@@ -6,7 +6,9 @@
 		"typescriptreact",
 		"json",
 		"javascriptreact",
-		"typescript.tsx"
+		"typescript.tsx",
+		"html",
+		"css"
 	],
 	"diagnostic.errorSign": "•",
 	"diagnostic.warningSign": "•",
