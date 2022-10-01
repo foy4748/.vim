@@ -19,7 +19,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jiangmiao/auto-pairs'
 
 	"Git Change Indicator
-	Plug 'airblade/vim-gitgutter'
+	"Plug 'airblade/vim-gitgutter'
 
 	"PyLint
 	Plug 'vim-scripts/pylint.vim'
