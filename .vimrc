@@ -28,5 +28,9 @@ call plug#begin('~/.vim/plugged')
 	"Movement
 	Plug 'unblevable/quick-scope'
 
-call plug#end()
+	"React Snippets 
+	"Works with coc.nvim & coc-snippets
+	Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+
+	call plug#end()
 "End of Installing Plugins-----------
