@@ -28,9 +28,18 @@ call plug#begin('~/.vim/plugged')
 	"Movement
 	Plug 'unblevable/quick-scope'
 
-	"React Snippets 
-	"Works with coc.nvim & coc-snippets
-	Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+	" Ultisnips for Snippet 
+	" Management
+	"Plug 'https://github.com/SirVer/ultisnips'
+
+	" Some helper for snippets
+	Plug 'https://github.com/honza/vim-snippets'
+	
+	" For JSX syntax highlight
+	Plug 'mxw/vim-jsx'
+
+	" For JS syntax highlight
+	Plug 'pangloss/vim-javascript'
 
 	call plug#end()
 "End of Installing Plugins-----------

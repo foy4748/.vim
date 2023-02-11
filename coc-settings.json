@@ -9,7 +9,8 @@
 		"javascriptreact",
 		"typescript.tsx",
 		"html",
-		"css"
+		"css",
+		"cpp"
 	],
 	"diagnostic.errorSign": "•",
 	"diagnostic.warningSign": "•",
@@ -51,5 +52,18 @@
 		"css": "css"
 	},
 	"tailwindCSS.trace.server": "messages",
-	"tailwindCSS.emmetCompletions": true
+	"tailwindCSS.emmetCompletions": true,
+	"snippets.loadFromExtensions": true,
+	"snippets.extends": {
+		"cpp": [
+			"c"
+		],
+		"javascriptreact": [
+			"javascript"
+		],
+		"typescript": [
+			"javascript"
+		]
+	},
+	"snippets.loadVSCodeProjectSnippets": true
 }
